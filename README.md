@@ -102,11 +102,4 @@ The most advanced version includes:
 
 ![Calculator Screenshot](src/main/resources/screenshots/screenshot.png)
 
----
-
-🚀 **Enjoy seamless calculations with the CS50 Final Project Calculator!**
-
-## Screenshots
-
-![screenshot](src/main/resources/screenshots/screenshot.png)
 
