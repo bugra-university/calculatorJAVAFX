@@ -1,13 +1,10 @@
-# Calculator Application
+# 🧮 Calculator Application
 
-#### Video Demo:  <https://youtu.be/WEFy49mCK2M>
+**Video Demo:** [Watch on YouTube](https://youtu.be/WEFy49mCK2M)
 
-This project is a multi-functional calculator application developed as a CS50 final project by Buğra Han. The
-application is designed
-to perform basic arithmetic operations, handle advanced mathematical functions, and display results in different number
-systems. The calculator's functionality is divided into three main categories based on complexity and feature set.
+This project is a **multi-functional calculator application** developed as a **CS50 final project** by **Buğra Han**. The application performs **basic arithmetic operations, advanced mathematical functions, and supports multiple number systems**. It is structured into three main categories based on complexity and features.
 
-## Table of Contents
+## 📌 Table of Contents
 
 - [Simple Calculator Functionality](#simple-calculator-functionality)
 - [Extended Calculator Functionality](#extended-calculator-functionality)
@@ -17,90 +14,97 @@ systems. The calculator's functionality is divided into three main categories ba
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 
-## Simple Calculator Functionality
+## ✨ Simple Calculator Functionality
 
-This version of the calculator includes the following features:
+This version includes:
 
-1. Numeric keypad layout reflecting a typical calculator screen.
-2. Result of the current operation is displayed at the top of the screen.
-3. Sequential mathematical operations are supported: after pressing the equals sign (`=`), the result of the operation
-   is displayed. Pressing an operation sign uses the previous result, while pressing a number starts a new operation.
-4. Operations are performed in the order they are entered (e.g., `2 + 2 * 2` results in `8`).
-5. The num button handles the power (`^`) functionality.
+- A numeric keypad layout similar to a traditional calculator.
+- Real-time result display at the top of the screen.
+- Support for sequential mathematical operations:
+  - Pressing `=` displays the result.
+  - Using an operator after `=` continues calculations with the previous result.
+  - Entering a number after `=` starts a new calculation.
+- Operations follow the order they are entered (e.g., `2 + 2 * 2 = 8`).
+- Power (`^`) function available via the number button.
 
-## Extended Calculator Functionality
+## 🏗️ Extended Calculator Functionality
 
-This version builds upon the simple calculator and includes:
+This version enhances the basic calculator by adding:
 
-1. Graphic buttons with simple color changes for visual enhancement.
-2. Results can be presented in binary, octal, and hexadecimal formats using additional buttons.
-3. A history button that opens a new window showing a list of all actions taken since the application started.
+- Improved UI with **graphic buttons** and color enhancements.
+- **Number system conversions**: Convert results to **binary, octal, and hexadecimal** formats.
+- **History Tracking**: View all calculations performed since app startup.
 
-## Calculator with Logic
+## 🔢 Calculator with Logic
 
 The most advanced version includes:
 
-- Enhanced operation handling: processes values and mathematical operations and calculates the result after
-  pressing `=` (e.g., `2 + 2 * 2 = 6`).
-- Support for an unlimited number of operating parameters.
-- Reverse Polish Notation (RPN) support, allowing systematic processing of operators and operands using a stack for
-  complex expressions.
+- **Enhanced operation handling**: Calculates results only after pressing `=` (e.g., `2 + 2 * 2 = 6`).
+- **Support for unlimited parameters**: Enables complex calculations.
+- **Reverse Polish Notation (RPN) support**:
+  - Uses a stack for systematic operator and operand processing.
+  - Allows efficient handling of complex expressions.
+  
+**Example: RPN Calculation for `(3 + 4) * 2`**
 
-## Features
+1. Press `3`
+2. Press `Enter`
+3. Press `4`
+4. Press `Enter`
+5. Press `+`
+6. Press `2`
+7. Press `Enter`
+8. Press `*`
+9. Press `=` → Result: `14`
 
-- **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
-- **Advanced Functions**: Power (`^`), binary, octal, and hexadecimal conversions.
-- **History Tracking**: View all previous operations performed during the current session.
-- **Responsive Design**: The calculator layout adjusts to different screen sizes, maintaining the proportion of buttons
-  on phones and tablets.
+## 🔥 Features
 
-## Installation
+- **Basic Operations**: Addition, subtraction, multiplication, and division.
+- **Advanced Functions**: Power (`^`), conversions to **binary, octal, and hexadecimal**.
+- **History Tracking**: Review all calculations in the session.
+- **Responsive UI**: Adaptive layout for various screen sizes (phones & tablets).
+
+## 🛠️ Installation
 
 1. Clone the repository:
-   ```bash
+   ```sh
    git clone https://github.com/hanbugra82/Calculator-.git
-2. The following dependencies are used in the project and have been added to the `pom.xml` file. Additionally, any
-   needed dependencies can be obtained from this
-   link: [Maven Central Repository](https://central.sonatype.com/?smo=true).
+   ```
+2. Ensure all dependencies are installed via `pom.xml`. Required dependencies:
+   - [Maven Central Repository](https://central.sonatype.com/?smo=true)
+   
+   | Dependency            | Description                             |
+   |----------------------|-----------------------------------------|
+   | `JavaFX Controls`     | UI components for JavaFX applications  |
+   | `exp4j`               | Mathematical expression parsing        |
+   | `apfloat`             | Arbitrary precision arithmetic        |
+   | `Apache Commons Math` | Advanced math functions               |
+   | `JavaFX FXML`         | UI structure and XML-based components  |
+   | `ControlsFX`          | Extended UI controls for JavaFX        |
+   | `Ikonli`              | Icon library for JavaFX applications  |
+   | `JUnit Jupiter API`   | Unit testing framework                |
+   | `JUnit Jupiter Engine`| Execution engine for JUnit tests      |
 
-   | Parameter              | Description                             |
-   |------------------------|-----------------------------------------|
-   | `JavaFX Controls:`     | org.openjfx:javafx-controls:21          |
-   | `exp4j:`               | net.objecthunter:exp4j:0.4.8            |
-   | `apfloat:`             | org.apfloat:apfloat:1.10.0              |
-   | `Apache Commons Math:` | org.apache.commons:commons-math3:3.6.1  |
-   | `JavaFX FXML:`         | org.openjfx:javafx-fxml:17.0.2          |
-   | `ControlsFX:`          | org.controlsfx:controlsfx:11.1.2        |
-   | `Ikonli:`              | org.kordamp.ikonli:ikonli-javafx:12.3.1 |
-   | `JUnit Jupiter API`    | (for testing)                           |
-   | `JUnit Jupiter Engine` | (for testing)                           |
+3. **Install SceneBuilder**: [Download SceneBuilder](https://gluonhq.com/products/scene-builder/) to enable drag-and-drop UI design for JavaFX.
 
-3. To utilize the following features, SceneBuilder must be installed. Download SceneBuilder from [Gluon SceneBuilder](https://gluonhq.com/products/scene-builder/) and follow the installation instructions provided on the website.
-   These capabilities enhance the development process by enabling rapid creation of user-friendly interfaces for JavaFX applications.
-- Visual Design: Create and edit UI by dragging and dropping components.
-- FXML Support: Edit FXML files directly to customize UI elements.
-- Visual Controls and Properties: Customize visual properties of components.
-- Integration Ease: Use alongside Java IDEs for seamless component integration and reuse.
+   - **Key Features:**
+     - Drag-and-drop UI elements
+     - FXML editing for custom UI modifications
+     - Seamless integration with Java IDEs
 
-## Usage
+## 📖 Usage
 
-1. Enhanced operation handling: the calculator processes values and mathematical operations and calculates the result
-   after pressing `=` (e.g., `2 + 2 * 2 = 6`).
-2. Support for an unlimited number of operating parameters.
-3. Incorporation of Reverse Polish Notation (RPN), allowing systematic processing of operators and operands using a
-   stack. This feature enables consistent and effective resolution of complex expressions.
-    - Example: To calculate `(3 + 4) * 2` in RPN mode, press the keys in the following order:
-        1. Press `3`
-        2. Press `Enter`
-        3. Press `4`
-        4. Press `Enter`
-        5. Press `+`
-        6. Press `2`
-        7. Press `Enter`
-        8. Press `*`
-        9. Finally, press `=`
+- Perform basic and advanced calculations.
+- View and manage past calculations via **History Tracking**.
+- Use **RPN mode** for efficient complex calculations.
 
-        - The result will be `14`.
+## 📸 Screenshots
+
+![Calculator Screenshot](src/main/resources/screenshots/screenshot.png)
+
+---
+
+🚀 **Enjoy seamless calculations with the CS50 Final Project Calculator!**
 
 ## Screenshots
 
